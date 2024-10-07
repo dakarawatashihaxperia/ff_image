@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Image Switcher",
-    "version": "0.0.1",
+    "version": "0.0.4",
     "author": "tatsupra",
     "applications": {
         "gecko": {
@@ -23,6 +23,11 @@
             "background.js"
         ]
     },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["content.js"],
+        "run_at": "document_start"
+    }],
     "browser_action": {
         "default_icon": "icons/icon.svg"
     }

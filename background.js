@@ -40,7 +40,7 @@ function toggleImageListener() {
     else {
         browser.webRequest.onBeforeRequest.addListener(
             handler,
-            {urls: ['<all_urls>'], types:['image', 'imageset']},
+            {urls: ['<all_urls>'], types:['image', 'imageset', 'media']},
             ['blocking']
         );
     }
